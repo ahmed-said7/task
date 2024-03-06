@@ -4,17 +4,13 @@
 
 ## Running the app
 
-```bash
-# development
-$ npm run start
+
 
 # watch mode
 $ npm run start:dev
 
-# production mode
-$ npm run start:prod
 
 
 ## Running the app with docker
 # development
-$ docker-compose up --build
+$ npm run docker
