@@ -57,6 +57,9 @@ export class ProductServices {
     };
     async buyProduct(user:UserDoc,body:{ productId:ObjectId,amount:number }){
         const product=await this.model.findOne({_id:body.productId});
+        if(!product){
+            throw new HttpException('product not found',400);
+        };
         if(body.amount > product.amount){
             throw new HttpException("you can not access this product",400);
         };
