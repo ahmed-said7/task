@@ -5,11 +5,9 @@ services:
     volumes:
       - ./src:/app/src:ro
     ports:
-      - "5000:5000"
-    env_file:
-      - ./src/.env
+      - "3000:3000"
     environment:
-      - Node_Env=development
+      - STAGE=docker
     depends_on:
       - mongo-srv
   mongo-srv:
