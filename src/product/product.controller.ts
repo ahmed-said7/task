@@ -47,5 +47,4 @@ export class ProductController {
     deleteProd( @User() user:UserDoc ,@Param("id") id:ObjectId ){
         return this.prodService.deleteProduct( user,id );
     };
-    
 };
