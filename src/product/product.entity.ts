@@ -11,7 +11,7 @@ export const productSchema=new mongoose.Schema({
     name:String,
     cost:Number
 });
-
+productSchema.index({"name":"text"});
 export interface ProductDoc extends mongoose.Document {
     seller:ObjectId,
     amount:number,
