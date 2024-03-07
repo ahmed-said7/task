@@ -10,7 +10,3 @@
 $ npm run start:dev
 
 
-
-## Running the app with docker
-# development
-$ npm run docker
