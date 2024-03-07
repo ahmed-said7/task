@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, ParseIntPipe, Patch, Post, Query } from "@nestjs/common";
+import { Body, Controller, Get, Param, ParseIntPipe, Patch, Post, Query, UseGuards } from "@nestjs/common";
 
 import { AuthServices } from "./auth.services";
 import { queryInterface } from "src/utils/api.features";
@@ -6,6 +6,7 @@ import { User } from "src/decorator/current.user.decorator";
 import { UserDoc } from "../user.entity";
 import { UpdateUserDto } from "../dto/update.user.dto";
 import { UpdateUserPassowrdDto } from "../dto/update.password";
+import { AuthorizationGuard } from "src/guards/roles.guards";
 
 
 @Controller("auth")
